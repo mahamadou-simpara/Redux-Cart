@@ -1,6 +1,6 @@
 import { configureStore, createSlice  } from "@reduxjs/toolkit";
 
-const itemInitState = { quantity: 0, isCartShown: false }
+const itemInitState = { quantity: 0, isCartShown: false, item: { title: 'Test', price: 6, description: 'This is a first product - amazing!'}}
 
 const cartReducer = createSlice({
     name: 'cart',
@@ -16,7 +16,8 @@ const cartReducer = createSlice({
             state.isCartShown = !state.isCartShown
         },
     }
-})
+});
+ 
 
 
 const store = configureStore({
